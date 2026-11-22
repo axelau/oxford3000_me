@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --border-width-3: 3px;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.adventure-bg {
+  background-color: #34248f;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1.25px, transparent 1.25px);
+  background-size: 18px 18px;
+}
+
+@keyframes card-swap {
+  from {
+    transform: rotateY(75deg);
+    opacity: 0.45;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.card-swap {
+  animation: card-swap 0.35s ease;
+}
+
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+}
